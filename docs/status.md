@@ -1,3 +1,18 @@
+## Shift console height
+
+18/10/2026, `fix/shift-console-height`, based on `7026c735`, Windows x86_64,
+Rust 1.99.0: swapped the Shift console shortcuts in both styles: Shift plus the
+console key follows live `con_height`; Shift+Escape opens a quarter screen.
+Ctrl plus the console key retains its
+full-screen override. Updated the existing height-selection unit test and
+[console key documentation](client.md). Formatting and diff whitespace checks
+passed. The updated height-selection function and existing unit test passed
+when compiled in isolation with `rustc --test`. Locked workspace build, tests
+and all-target Clippy were attempted during this change but
+blocked by G: running out of disk space (OS error 112); temporary build outputs
+were cleaned. Full workspace checks and in-game keyboard behavior remain
+unverified.
+
 ## Emotes on stock models: limbs out of wider bodies
 
 15/10/2026, `feat/emote-body-fit` (Creyon, on `feat/emotes-on-classic-models`): a dance made
